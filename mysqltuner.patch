@@ -1,0 +1,19 @@
+--- ./mysqltuner	2008-11-27 00:28:03.594608254 +0200
++++ ./mysqltuner	2008-11-27 00:27:41.121275469 +0200
+@@ -34,7 +34,6 @@
+ #
+ use strict;
+ use warnings;
+-use diagnostics;
+ use Getopt::Long;
+ 
+ # Set up a few variables for use in the script
+@@ -230,7 +229,7 @@
+ sub mysql_setup {
+ 	$doremote = 0;
+ 	$remotestring = '';
+-	my $command = `which mysqladmin`;
++	my $command = `[ -x /usr/bin/mysqladmin ] && echo /usr/bin/mysqladmin`;
+ 	chomp($command);
+ 	if (! -e $command) {
+ 		badprint "Unable to find mysqladmin in your \$PATH.  Is MySQL installed?\n";
