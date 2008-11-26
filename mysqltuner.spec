@@ -1,3 +1,4 @@
+%include	/usr/lib/rpm/macros.perl
 Summary:	High Performance MySQL Tuning Script
 Name:		mysqltuner
 Version:	0.9.9
@@ -7,6 +8,7 @@ Group:		Daemons
 URL:		http://rackerhacker.com/mysqltuner/
 Source0:	http://mysqltuner.com/%{name}.pl
 # Source0-md5:	097ceed8577ff4dbed134970fd8781e4
+BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	mysql-client
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
