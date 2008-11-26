@@ -7,7 +7,7 @@ Group:		Daemons
 URL:		http://rackerhacker.com/mysqltuner/
 Source0:	http://mysqltuner.com/%{name}.pl
 # Source0-md5:	097ceed8577ff4dbed134970fd8781e4
-Requires:	mysql-clients
+Requires:	mysql-client
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
