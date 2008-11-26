@@ -2,11 +2,12 @@
 Summary:	High Performance MySQL Tuning Script
 Name:		mysqltuner
 Version:	0.9.9
-Release:	0.1
+Release:	0.3
 License:	GPL v3+
 Group:		Daemons
 URL:		http://rackerhacker.com/mysqltuner/
 Source0:	http://mysqltuner.com/%{name}.pl
+Patch0:		%{name}.patch
 # Source0-md5:	097ceed8577ff4dbed134970fd8781e4
 BuildRequires:	rpm-perlprov >= 4.1-13
 Requires:	mysql-client
@@ -26,7 +27,8 @@ Montgomery's MySQL tuning primer script.
 
 %prep
 %setup -q -c -T
-%{__sed} -e 's,\r$,,;/^use diagnostics/d' %{SOURCE0} > %{name}
+%{__sed} -e 's,\r$,,' %{SOURCE0} > %{name}
+%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
