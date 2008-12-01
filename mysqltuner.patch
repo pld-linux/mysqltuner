@@ -1,3 +1,5 @@
+TODO: cook perlish which(), or hardcode
+
 --- ./mysqltuner	2008-11-27 00:28:03.594608254 +0200
 +++ ./mysqltuner	2008-11-27 00:27:41.121275469 +0200
 @@ -34,7 +34,6 @@
