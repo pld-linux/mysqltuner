@@ -1,6 +1,5 @@
 # TODO
 # - perlish which(1) or hardcode mysqladmin path in patch0
-%include	/usr/lib/rpm/macros.perl
 Summary:	High Performance MySQL Tuning Script
 Name:		mysqltuner
 Version:	1.2.0
