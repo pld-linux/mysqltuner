@@ -28,7 +28,7 @@ Montgomery's MySQL tuning primer script.
 
 %prep
 %setup -q -n MySQLTuner-perl-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
